@@ -83,8 +83,8 @@ function doRunConcurrent<T, R>(
   const generator = generatorFunction();
 
   for (let i = 0; i < maxConcurrency; i++) {
+    // eslint-disable-next-line no-async-promise-executor
     const p = new Promise<R[]>(async (resolve, reject) => {
-      // eslint-disable-line no-async-promise-executor
       const results: R[] = [];
 
       let gen = generator.next();

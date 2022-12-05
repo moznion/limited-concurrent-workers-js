@@ -11,7 +11,7 @@ describe('runConcurrent', () => {
 
     const result = await runConcurrent<string, number>(
       3,
-      arg => (resolve, reject) => {
+      arg => (resolve) => {
         resolve(Number(arg));
       },
       generator,
@@ -33,7 +33,7 @@ describe('runConcurrent', () => {
     try {
       await runConcurrent<string, number>(
         3,
-        arg => (resolve, reject) => {
+        () => (resolve, reject) => {
           reject('reject!');
         },
         generator,
@@ -55,7 +55,7 @@ describe('runConcurrentFlatten', () => {
 
     const result = await runConcurrentFlatten<string, number>(
       3,
-      arg => (resolve, reject) => {
+      arg => (resolve) => {
         resolve(Number(arg));
       },
       generator,
@@ -74,7 +74,7 @@ describe('runConcurrentFlatten', () => {
     try {
       await runConcurrentFlatten<string, number>(
         3,
-        arg => (resolve, reject) => {
+        () => (resolve, reject) => {
           reject('reject!');
         },
         generator,
@@ -96,7 +96,7 @@ describe('runConcurrentSettled', () => {
 
     const result = await runConcurrentSettled<string, number>(
       3,
-      arg => (resolve, reject) => {
+      arg => (resolve) => {
         resolve(Number(arg));
       },
       generator,
@@ -130,7 +130,7 @@ describe('runConcurrentSettled', () => {
     );
     expect(result.length).toBe(3);
 
-    let fulfilledResults: PromiseFulfilledResult<number[]>[] = [];
+    const fulfilledResults: PromiseFulfilledResult<number[]>[] = [];
     let numOfRejected = 0;
     let rejectedResult;
     for (const r of result) {
