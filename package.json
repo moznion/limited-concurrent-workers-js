@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "scripts": {
     "build": "tsc && npm run gendoc",
-    "test": "jest --no-cache --coverage --config ./jest.config.js",
+    "test": "jest --no-cache --coverage",
     "lint": "eslint .",
     "fmt": "find -name '*.ts' -not -path '*.d.ts' -not -path './node_modules/*' | xargs prettier --write",
     "gendoc": "typedoc ./*.ts",
