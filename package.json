@@ -1,5 +1,5 @@
 {
-  "name": "@moznion/limited-concurrency-worker",
+  "name": "@moznion/limited-concurrent-workers",
   "version": "0.0.1",
   "description": "A library that provides a limited number of concurrent workers",
   "main": "index.js",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/moznion/limited-concurrency-worker-js.git"
+    "url": "git+https://github.com/moznion/limited-concurrent-workers-js.git"
   },
   "bugs": {
-    "url": "https://github.com/moznion/limited-concurrency-worker-js/issues"
+    "url": "https://github.com/moznion/limited-concurrent-workers-js/issues"
   },
-  "homepage": "https://github.com/moznion/limited-concurrency-worker-js#readme",
+  "homepage": "https://github.com/moznion/limited-concurrent-workers-js#readme",
   "author": {
     "name": "moznion",
     "email": "moznion@mail.moznion.net"

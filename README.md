@@ -1,4 +1,4 @@
-# limited-concurrency-worker-js [![.github/workflows/check.yml](https://github.com/moznion/limited-concurrency-worker-js/actions/workflows/check.yml/badge.svg)](https://github.com/moznion/limited-concurrency-worker-js/actions/workflows/check.yml) [![codecov](https://codecov.io/gh/moznion/limited-concurrency-worker-js/branch/main/graph/badge.svg?token=Y8IYCBWLNT)](https://codecov.io/gh/moznion/limited-concurrency-worker-js) [![npm version](https://badge.fury.io/js/@moznion%2Flimited-concurrency-worker.svg)](https://badge.fury.io/js/@moznion%2Flimited-concurrency-worker)
+# limited-concurrent-workers-js [![.github/workflows/check.yml](https://github.com/moznion/limited-concurrent-workers-js/actions/workflows/check.yml/badge.svg)](https://github.com/moznion/limited-concurrent-workers-js/actions/workflows/check.yml) [![codecov](https://codecov.io/gh/moznion/limited-concurrent-workers-js/branch/main/graph/badge.svg?token=Y8IYCBWLNT)](https://codecov.io/gh/moznion/limited-concurrent-workers-js) [![npm version](https://badge.fury.io/js/@moznion%2Flimited-concurrent-workers.svg)](https://badge.fury.io/js/@moznion%2Flimited-concurrent-workers)
 
 A library that provides a limited number of concurrent workers for JavaScript/Typescript.
 
@@ -54,7 +54,7 @@ const result = await runConcurrent<string, number>(
 - `async function runConcurrentFlatten<T, R>(maxConcurrency: number, executorProvider: (arg: T) => (resolve: (value: R | PromiseLike<R>) => void, reject: (reason?: unknown) => void) => void, generatorFunction: () => IterableIterator<T>): Promise<Awaited<R[]>>`
 - `async function runConcurrentSettled<T, R>(maxConcurrency: number, executorProvider: (arg: T) => (resolve: (value: R | PromiseLike<R>) => void, reject: (reason?: unknown) => void) => void, generatorFunction: () => IterableIterator<T>): Promise<PromiseSettledResult<R[]>[]>`
 
-Please see also [typedoc](https://moznion.github.io/limited-concurrency-worker-js/).
+Please see also [typedoc](https://moznion.github.io/limited-concurrent-workers-js/).
 
 ## Author
 
