@@ -1,4 +1,4 @@
-# limited-concurrency-worker-js
+# limited-concurrency-worker-js [![.github/workflows/check.yml](https://github.com/moznion/limited-concurrency-worker-js/actions/workflows/check.yml/badge.svg)](https://github.com/moznion/limited-concurrency-worker-js/actions/workflows/check.yml) [![codecov](https://codecov.io/gh/moznion/limited-concurrency-worker-js/branch/main/graph/badge.svg?token=Y8IYCBWLNT)](https://codecov.io/gh/moznion/limited-concurrency-worker-js)
 
 A library that provides a limited number of concurrent workers for JavaScript/Typescript.
 
