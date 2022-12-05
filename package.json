@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "fmt": "find -name '*.ts' -not -path '*.d.ts' -not -path './node_modules/*' | xargs prettier --write",
     "gendoc": "typedoc ./*.ts",
-    "release": "npm run build && npm publish"
+    "release": "npm run build && npm publish --access=public"
   },
   "repository": {
     "type": "git",
