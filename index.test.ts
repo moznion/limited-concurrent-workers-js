@@ -11,8 +11,10 @@ describe('runConcurrent', () => {
 
     const result = await runConcurrent<string, number>(
       3,
-      arg => (resolve) => {
-        resolve(Number(arg));
+      arg => resolve => {
+        setTimeout(() => {
+          resolve(Number(arg));
+        }, Math.floor(Math.random() * 50)); // jitter
       },
       generator,
     );
@@ -55,8 +57,10 @@ describe('runConcurrentFlatten', () => {
 
     const result = await runConcurrentFlatten<string, number>(
       3,
-      arg => (resolve) => {
-        resolve(Number(arg));
+      arg => resolve => {
+        setTimeout(() => {
+          resolve(Number(arg));
+        }, Math.floor(Math.random() * 50)); // jitter
       },
       generator,
     );
@@ -96,8 +100,10 @@ describe('runConcurrentSettled', () => {
 
     const result = await runConcurrentSettled<string, number>(
       3,
-      arg => (resolve) => {
-        resolve(Number(arg));
+      arg => resolve => {
+        setTimeout(() => {
+          resolve(Number(arg));
+        }, Math.floor(Math.random() * 50)); // jitter
       },
       generator,
     );
@@ -124,7 +130,9 @@ describe('runConcurrentSettled', () => {
           reject('reject!');
           return;
         }
-        resolve(Number(arg));
+        setTimeout(() => {
+          resolve(Number(arg));
+        }, Math.floor(Math.random() * 50)); // jitter
       },
       generator,
     );
