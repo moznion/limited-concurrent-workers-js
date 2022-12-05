@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "build": "tsc && npm run gendoc",
+    "build": "tsc",
     "test": "jest --no-cache --coverage",
     "lint": "eslint .",
     "fmt": "find -name '*.ts' -not -path '*.d.ts' -not -path './node_modules/*' | xargs prettier --write",
