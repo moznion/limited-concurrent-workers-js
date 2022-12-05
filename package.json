@@ -1,7 +1,7 @@
 {
   "name": "@moznion/limited-concurrent-workers",
   "version": "0.0.1",
-  "description": "A library that provides a limited number of concurrent workers",
+  "description": "A library that provides a limited number of concurrent workers system",
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
